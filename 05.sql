@@ -1,0 +1,3 @@
+Select custid,count(ordid), case when avg(amount)=0 and count(ordid)=0 then null when avg(amount)=0 and count(ordid) !=0 then cast( 0 as integer) else cast(avg(amount) as numeric (5,2)) end from (select o.ordid ,c.custid,sum(coalesce(p.price, 0)*coalesce(d.qty, 0)) amount 
+From customers c left join orders o on c.custid=o.ocust left join details d on o.ordid=d.ordid left join products p on p.pcode = d.pcode 
+Group by o.ordid, c.custid) as something group by custid order by 1;
