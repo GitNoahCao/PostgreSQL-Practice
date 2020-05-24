@@ -1,0 +1,58 @@
+CREATE TABLE Artifact (
+ArtifactNumber varchar(10) PRIMARY KEY, 
+Dimensions DECIMAL, 
+Weight DECIMAL, 
+Material varchar(10), 
+Humidity DECIMAL
+);
+
+INSERT INTO Artifact (ArtifactNumber, Dimensions, Weight, Material, Humidity)
+VALUES ('CL892', 253.7, 45.5, 'glass', 0.3), 
+('LK842', 194.2, 145.8,'bronze', 0.1), 
+('KH281', 25.2, 425.8,'gold', 0.1), 
+('JK941', 295.1, 445.9,'glass', 0.3), 
+('EJ123', 1921.3, 245.3,'glass', 0.2), 
+('KJ093', 915.2, 1405.5,'bronze', 0.2), 
+('KB925', 369.4, 2395.9,'gold', 0.1), 
+('YW529', 95.2, 459.5,'fabric', 0.3), 
+('KT275', 1553.9, 35.8,'glass', 0.2), 
+('KO093', 498.4, 95.4,'fabric', 0.4);
+
+CREATE TABLE Technician (Name VARCHAR(15), SIN INT PRIMARY KEY, Address VARCHAR(30), PhoneNumber BIGINT, Salary INT, Job VARCHAR(15) ,  ExpertMaterials VARCHAR(30), UnionID INT);
+
+INSERT INTO Technician (Name, SIN, Address, PhoneNumber, Salary, Job,  ExpertMaterials, UnionID)
+VALUES
+('Peter', 748721232, '313 Atlantic ave',7786257345, 4500 ,'conservationist','glass', 765412),
+('Tom', 364251230, '33 Wind ave',7781621231, 3500 ,'restorer','gold', 982615),
+('Frank', 323846521, '18 6th ave',7786453798, 3500 ,'conservationist','bronze', 187291),
+('James', 331746157, '27 TransCa ave',7782514387, 4000 ,'restorer','glass', 194621),
+('Davis', 314745162, '167 Colin ave',7780975184, 5500 ,'conservationist','glass', 651984),
+('Kobe', 353228194, '726 56th ave',7786143987, 4500 ,'restorer','clay', 871941),
+('Nash', 327321621, '261 78th ave',7781029746, 3500 ,'conservationist','gold', 918312),
+('Yao', 846322719, '61 Bay ave',7781092649, 5000 ,'restorer','glass', 194712),
+('Jordan', 832164821, '9 Atlantic ave',7781092641, 4000 ,'conservationist','bronze', 194128),
+('Mike', 832128821, '10 Atlantic ave',7789092641, 4500 ,'conservationist','clay', 294198);
+
+
+CREATE TABLE Guide (SIN INT PRIMARY KEY, DateOfExam DATE, UnionID INT);
+
+INSERT INTO Guide (SIN, DateOfExam, UnionID) VALUES
+(875493092,'2018-12-01',987461),(874093287,'2018-07-01',516921),(175839219,'2018-07-01',854019),(654987127,'2018-07-01',519123),(275318528,'2018-12-01',549163),
+(761985092,'2018-12-01',546192),(562986027,'2018-12-01',548194),(768401854,'2018-12-01',103649),(186509519,'2018-07-01',984183),(867012869,'2018-07-01',518361);
+
+
+CREATE TABLE Test (TestNumber BIGINT PRIMARY KEY, Name VARCHAR(15), MaximumPossibleScore SMALLINT, TestDate DATE, HoursSpent SMALLINT, Score SMALLINT);
+
+INSERT INTO Test (TestNumber, Name, MaximumPossibleScore, TestDate, HoursSpent, Score) VALUES
+(8639172198,'R test', 100, '2018-12-01', 5, 87),
+(3916384928,'Q test', 50, '2018-12-03', 2, 45),
+(1831829313,'M test', 10, '2018-11-01', 5, 7),
+(7481094621,'R test', 100, '2018-09-03', 3, 98),
+(4618293182,'Q test', 10, '2018-07-01', 6, 8),
+(1182734812,'Q test', 50, '2018-09-07', 3, 37),
+(3746174821,'R test', 100, '2018-10-07', 5, 84),
+(1837461521,'M test', 10, '2018-05-08', 2, 9),
+(3938173621,'R test', 100, '2018-04-11', 1, 95),
+(3716451728,'Q test', 50, '2018-09-21', 3, 45);
+
+

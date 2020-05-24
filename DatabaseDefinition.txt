@@ -1,0 +1,60 @@
+## Thanks for TA's help on office hours and email , I really appreciate it.
+
+Database for An Archaeology Museum
+
+
+Artifact (ArtifactNumber VARCHAR(10), Dimensions DECIMAL, Weight DECIMAL, Material VARCHAR(10), Humidity DECIMAL)
+
+Primary key of Artifact: {ArtifactNumber}
+
+
+
+Technician (Name VARCHAR(15), SIN INT, Address VARCHAR(30), PhoneNumber BIGINT, Salary INT, Job VARCHAR(15) ,  ExpertMaterials VARCHAR(30), UnionID INT
+
+Primary key of Technician: {SIN}
+
+
+
+Guide (SIN INT, DateOfExam DATE, UnionID INT)
+
+Primary key of Guides: {SIN}
+
+
+
+Test (TestNumber BIGINT, Name VARCHAR(15), MaximumPossibleScore SMALLINT, TestDate DATE, HoursSpent SMALLINT, Score SMALLINT)
+
+Primary key of Test: {TestNumber}
+
+
+
+
+Explanation:
+
+For the artifact relation, I select Artifact Number, Dimensions, Weight and Material as attributes. I chose VARCHAR as data type for artifact number instead of INT is because CL892 is an example so INT is incorrect for it. Dimensions using INT is because it is a sum number of length, width and height. Humidity’s data type is DECIMAL because the value will be like 0.2, 0.4, etc. ArtifactNumber was chosen as the primary key because of the uniqueness.
+
+For the technician relation, Name, SIN, Address, PhoneNumber, Salary, Responsibility, ExpertMaterials and UnionID were chosen as the attributes. INT was chosen as the datatype for SIN, Salary and union membership number (UnionID) because they are all integers. Primary key was SIN because of uniqueness.
+
+For the relation of guides, SIN, date of exam and UnionID are chosen as the attributes. INT, DATE and INT are the data typesrespectively. SIN was chosen as the primary key because of uniqueness.
+
+For the relation of test, TestNumber, Name, MaximumPossibleScore , TestDate , HoursSpent and ScoreReceived were chosen as the attributes. SMALLINT was chosen as the data type for some attributes because their data will be small integers. TestNumber was the primary key because of uniqueness. (200 words)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
